@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+     background: linear-gradient(to bottom right, #FFC371, #FF5F6D, #AD5389, #3C1053);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #333;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #FFFFFF, #F8F8F8);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      padding: 10px;
+      width: 35%;
+    }
+
+    input[type="submit"]:hover {
+    background-color: blue;
+    }
+  </style>
+</head>
+<body>
+ 
+  <form action="/predict" method="post">
+    <label for="admin">Administrative:</label>
+    <input type="text" id="admin" name="admin" required>
+
+    <label for="admin-duration">Administrative Duration:</label>
+    <input type="text" id="admin-duration" name="admin-duration" required>
+
+    <label for="info">Informational:</label>
+    <input type="text" id="info" name="info" required>
+
+    <label for="info-duration">Informational Duration:</label>
+    <input type="text" id="info-duration" name="info-duration" required>
+
+    <label for="product-related">Product Related:</label>
+    <input type="text" id="product-related" name="product-related" required>
+
+    <label for="product-related-duration">Product Related Duration:</label>
+    <input type="text" id="product-related-duration" name="product-related-duration" required>
+
+    <label for="bounce-rates">Bounce Rates:</label>
+    <input type="text" id="bounce-rates" name="bounce-rates" required>
+
+    <label for="exit-rates">Exit Rates:</label>
+    <input type="text" id="exit-rates" name="exit-rates" required>
+
+    <label for="page-values">Page Values:</label>
+    <input type="text" id="page-values" name="page-values" required>
+
+    <label for="special-day">Special Day:</label>
+    <input type="text" id="special-day" name="special-day" required>
+
+    <label for="os">Operating Systems:</label>
+    <input type="text" id="os" name="os" required>
+
+    <label for="browser">Browser:</label>
+    <input type="text" id="browser" name="browser" required>
+
+    <label for="region">Region:</label>
+    <input type="text" id="region" name="region" required>
+
+    <label for="traffic-type">Traffic Type:</label>
+    <input type="text" id="traffic-type" name="traffic-type" required>
+
+    <label for="weekend">Weekend:</label>
+    <select id="weekend" name="weekend" required>
+      <option value="True">Yes</option>
+      <option value="False">No</option>
+    </select>
+
+    <label for="month">Month:</label>
+    <select id="month" name="month" required>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+
+    <label for="visitor-type">Visitor Type:</label>
+    <select id="visitor-type" name="visitor-type" required>
+      <option value="1">New Visitor</option>
+      <option value="0">Returning Visitor</option>
+      <option value="2">other</option>
+    </select>
+<br>
+<br>
+<div style="text-align:center"> 
+    <input type="submit" value="Submit" align="center">
+</div>
+  </form>
+</body>
+</html>
